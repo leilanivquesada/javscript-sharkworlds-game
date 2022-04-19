@@ -21,21 +21,35 @@ const numWrong = 0;
 // The divs should be appended to the section with id="word-container".
 const createDivsForChars = (word) => {
   // Replace this with your code
+  
+  // iterating over the string argument
+  for (const w of word){
+    // for each letter in the string, create a div
+    document.querySelector('#word-container').insertAdjacentHTML('beforeend',`<div class="letter-box ${w}"></div>`);
+  }
 };
-
+console.log(createDivsForChars("blue"));
+// console.log(createDivsForChars("hey guys how are you"));
 // Loop over each letter in the alphabet and generate a button for each letter
 // The buttons should be appended to the section with id="letter-buttons"
 const generateLetterButtons = () => {
   // Replace this with your code
+  for (const word of ALPHABET){
+    document.querySelector('#letter-buttons').insertAdjacentHTML('beforeend', `<button id = ${word}>${word}</button>`);
+  }
 };
-
+console.log(generateLetterButtons());
 // Set the `disabled` property of `buttonEl` to `true.
 //
 // `buttonEl` is an `HTMLElement` object.
 //
 const disableLetterButton = (buttonEl) => {
   // Replace this with your code
+
+
 };
+
+console.log(disableLetterButton(buttonEl));
 
 // This is a helper function we will use in the future
 // It should return `true` if `letter` is in the word
